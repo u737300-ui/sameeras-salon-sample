@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sameera's Salon &amp; Academy — Dadar East, Mumbai | Hair, Skin, Makeup &amp; Bridal</title>
+<meta name="description" content="Sameera's Salon & Academy in Dadar East, Mumbai — rated 4.8★ by 650 customers. Hair care, hair spa, skin care, makeup & bridal packages, manicure, pedicure and Rica wax for men & women. Open every day, 8:30 am – 10:00 pm. Book your appointment online.">
+
+<!-- Link preview (WhatsApp / social sharing) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sameera's Salon & Academy">
+<meta property="og:url" content="https://u737300-ui.github.io/sameeras-salon-sample/">
+<meta property="og:title" content="Sameera's Salon & Academy — Dadar East, Mumbai">
+<meta property="og:description" content="Rated 4.8★ by 650 customers — hair, hair spa, skin care, makeup & bridal packages in Dadar East, Mumbai. Tap to see services, prices & book on WhatsApp.">
+<meta property="og:image" content="https://u737300-ui.github.io/sameeras-salon-sample/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sameera's Salon & Academy — Dadar East, Mumbai">
+<meta name="twitter:description" content="Rated 4.8★ by 650 customers — hair, hair spa, skin care, makeup & bridal packages in Dadar East, Mumbai. Tap to see services, prices & book on WhatsApp.">
+<meta name="twitter:image" content="https://u737300-ui.github.io/sameeras-salon-sample/img/og-cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#3B1F3A; --plum-2:#4C2A4B; --plum-deep:#2A1530;
+    --gold:#C9A24B; --gold-soft:#E7CF9B;
+    --ivory:#FAF6EF; --ivory-2:#F3EBDD; --white:#FFFFFF;
+    --ink:#33262F; --ink-soft:#7A6A72;
+    --serif:'Playfair Display', Georgia, serif; --sans:'Jost', 'Segoe UI', sans-serif;
+    --shadow:0 18px 45px rgba(59,31,58,.16); --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.65;font-weight:300;overflow-x:hidden}
+  button{font-family:inherit}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1180px,92%);margin:0 auto}
+  .eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;font-weight:500;color:var(--gold)}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;color:var(--plum)}
+  h2{font-size:clamp(2rem,4.2vw,3rem)}
+  h2 em, h1 em{font-style:italic;color:var(--gold)}
+  .section{padding:clamp(4rem,9vw,6.5rem) 0}
+  .center{text-align:center}
+  .lead{max-width:660px;margin:1rem auto 0;color:var(--ink-soft);font-size:1.06rem}
+  .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 2rem;border-radius:999px;font-weight:500;letter-spacing:.05em;font-size:.95rem;transition:.3s;border:1px solid transparent;cursor:pointer}
+  .btn-wa{background:#25D366;color:#0C3520}
+  .btn-wa:hover{background:#1fb857;transform:translateY(-2px)}
+  .btn-call{background:var(--plum);color:var(--ivory)}
+  .btn-call:hover{background:var(--gold);color:var(--plum-deep);transform:translateY(-2px)}
+  .btn-ghost{border-color:rgba(59,31,58,.35);color:var(--plum);background:rgba(255,255,255,.4)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Header ---------- */
+  header{position:fixed;inset:0 0 auto 0;z-index:60;transition:.35s}
+  header.scrolled{background:rgba(250,246,239,.94);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(59,31,58,.10)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+  .logo{font-family:var(--serif);font-size:1.5rem;color:var(--ivory)}
+  header.scrolled .logo{color:var(--plum)}
+  .logo span{color:var(--gold);font-style:italic}
+  .logo small{display:block;font-family:var(--sans);font-size:.56rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .nav-links{display:flex;gap:2rem;align-items:center;font-size:.92rem;letter-spacing:.07em;color:var(--ivory)}
+  header.scrolled .nav-links{color:var(--plum)}
+  .nav-links a{position:relative;padding:.2rem 0}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{padding:.58rem 1.35rem;border:1px solid var(--gold);border-radius:999px;font-weight:500;color:var(--gold)!important}
+  .nav-cta:hover{background:var(--gold);color:var(--plum-deep)!important}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .burger span{display:block;width:26px;height:2px;background:var(--gold);margin:6px 0;transition:.3s}
+
+  /* ---------- Hero ---------- */
+  .hero{min-height:100svh;display:grid;grid-template-columns:1.02fr 1fr;align-items:stretch;padding-top:84px;background:linear-gradient(125deg,var(--plum-deep) 52%,var(--plum-2))}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:3rem 4rem 3rem max(4vw,2rem);max-width:660px;justify-self:end}
+  .hero-copy h1{font-size:clamp(2.6rem,5.2vw,4.3rem);margin:1.1rem 0 1.1rem;color:var(--ivory)}
+  .hero-copy p{color:#E9DFE4;font-size:1.08rem;max-width:500px;font-weight:300}
+  .badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.6rem;background:rgba(255,255,255,.08);border:1px solid rgba(201,162,75,.55);color:var(--gold-soft);padding:.55rem 1.1rem;border-radius:999px;font-size:.92rem;letter-spacing:.04em;width:fit-content}
+  .badge b{color:#fff;font-weight:600}
+  .hero-btns{display:flex;gap:1rem;margin-top:2.1rem;flex-wrap:wrap}
+  .hero-media{position:relative;min-height:420px}
+  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--plum-deep) 0%,transparent 26%)}
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--plum);color:var(--ivory)}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding:2rem 0;text-align:center}
+  .trust-grid .num{font-family:var(--serif);font-size:1.9rem;color:var(--gold)}
+  .trust-grid .lbl{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:#D9CBD6}
+
+  /* ---------- Services ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+  .svc{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(59,31,58,.08);display:flex;flex-direction:column}
+  .svc img{height:210px;width:100%;object-fit:cover}
+  .svc-body{padding:1.6rem 1.6rem 1.8rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+  .svc-body h3{font-size:1.35rem}
+  .svc-body ul{list-style:none;color:var(--ink-soft);font-size:.97rem}
+  .svc-body li{padding:.45rem 0;border-bottom:1px dashed #EADFD8;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .svc-body li:last-child{border-bottom:0}
+  .sname{flex:1 1 130px;color:var(--ink)}
+  .price{color:var(--plum);font-weight:600;white-space:nowrap}
+  .price small{color:var(--gold);font-weight:500}
+  .book-btn{background:var(--plum);color:var(--ivory);border:0;border-radius:999px;padding:.34rem .95rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;cursor:pointer;transition:.25s;white-space:nowrap}
+  .book-btn:hover{background:var(--gold);color:var(--plum-deep)}
+
+  /* ---------- Packages ---------- */
+  .packages{background:linear-gradient(140deg,var(--plum-deep),var(--plum-2));color:var(--ivory)}
+  .packages h2{color:var(--ivory)}
+  .packages .lead{color:#DCCEDB}
+  .pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3rem}
+  .pkg{background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.45);border-radius:var(--radius);padding:2rem 1.4rem;text-align:center;display:flex;flex-direction:column;gap:.5rem;align-items:center}
+  .pkg.hot{background:var(--gold);border-color:var(--gold);color:var(--plum-deep)}
+  .pkg .tag{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft)}
+  .pkg.hot .tag{color:var(--plum-2)}
+  .pkg .amt{font-family:var(--serif);font-size:2.3rem;color:#fff}
+  .pkg.hot .amt{color:var(--plum-deep)}
+  .pkg p{font-size:.94rem;color:#DCCEDB}
+  .pkg.hot p{color:var(--plum-2)}
+  .pkg .book-btn{margin-top:auto;background:var(--gold);color:var(--plum-deep);padding:.6rem 1.5rem;font-size:.88rem}
+  .pkg .book-btn:hover{background:#fff}
+  .pkg.hot .book-btn{background:var(--plum);color:var(--ivory)}
+  .pkg.hot .book-btn:hover{background:var(--plum-deep)}
+
+  /* ---------- Academy / About split ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  .split img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;height:100%;min-height:340px;object-fit:cover}
+  .split p{color:var(--ink-soft);margin-top:1rem}
+  .ticks{list-style:none;margin-top:1.4rem;display:grid;gap:.55rem;color:var(--ink)}
+  .ticks li::before{content:"✦";color:var(--gold);margin-right:.6rem}
+  .academy{background:var(--ivory-2)}
+
+  /* ---------- Gallery ---------- */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem}
+  .gal img{width:100%;height:280px;object-fit:cover;border-radius:14px;transition:.4s}
+  .gal img:hover{transform:scale(1.02)}
+
+  /* ---------- Why us ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+  .why{background:var(--white);border-radius:var(--radius);padding:2rem 1.7rem;box-shadow:0 10px 30px rgba(59,31,58,.07)}
+  .why .ico{font-size:1.7rem;color:var(--gold)}
+  .why h3{font-size:1.25rem;margin:.7rem 0 .4rem}
+  .why p{color:var(--ink-soft);font-size:.97rem}
+
+  /* ---------- Visit / contact ---------- */
+  .visit{background:var(--plum-deep);color:var(--ivory)}
+  .visit h2{color:var(--ivory)}
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,4rem);margin-top:2.6rem}
+  .visit h3{color:var(--gold-soft);font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:500;margin-bottom:.7rem}
+  .visit p{color:#E4D8E1}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(255,255,255,.18);padding:.45rem 0;color:#E4D8E1}
+  .visit .btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+
+  /* ---------- Booking form ---------- */
+  .book-sec{background:linear-gradient(180deg,var(--ivory) 0%,var(--ivory-2) 100%)}
+  .book-card{max-width:760px;margin:3rem auto 0;background:var(--white);border-radius:22px;box-shadow:var(--shadow);padding:clamp(1.8rem,4vw,2.8rem);border:1px solid #EFE3D2}
+  .book-card.flash{animation:flash 1.2s ease}
+  @keyframes flash{0%{box-shadow:0 0 0 0 rgba(201,162,75,.55)}100%{box-shadow:0 0 0 26px rgba(201,162,75,0)}}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+  .field{display:flex;flex-direction:column;gap:.4rem}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--plum)}
+  .field input,.field select{font-family:inherit;font-size:1rem;font-weight:300;color:var(--ink);padding:.85rem 1rem;border:1.5px solid #E2D5C3;border-radius:12px;background:var(--ivory);outline:none;transition:.25s;width:100%}
+  .field input:focus,.field select:focus{border-color:var(--gold);background:#fff}
+  .field input.invalid,.field select.invalid{border-color:#D64545;background:#FDF1F1}
+  .bk-error{display:none;color:#B32626;font-size:.95rem;margin-top:1rem;font-weight:400}
+  .bk-error.show{display:block}
+  .book-submit{width:100%;justify-content:center;margin-top:1.4rem;font-size:1.02rem;padding:1.05rem 2rem}
+  .bk-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:1rem}
+
+  footer{background:#1E0F22;color:#B9A6B5;padding:2.4rem 0;text-align:center;font-size:.9rem}
+  footer .fname{font-family:var(--serif);font-size:1.25rem;color:var(--ivory)}
+  footer .credit{margin-top:.9rem;font-size:.78rem;color:#8d7689;letter-spacing:.05em}
+
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+
+  @media(max-width:900px){
+    .svc-grid,.why-grid{grid-template-columns:1fr 1fr}
+    .pkg-grid{grid-template-columns:1fr 1fr}
+    .trust-grid{grid-template-columns:1fr 1fr;gap:1.1rem}
+    .gal{grid-template-columns:1fr 1fr}
+    .split,.visit-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 auto 0;top:64px;background:var(--ivory);flex-direction:column;padding:1.4rem;gap:1.1rem;display:none;box-shadow:0 20px 40px rgba(59,31,58,.15);color:var(--plum)}
+    .nav-links.open{display:flex}
+    .burger{display:block}
+    .hero{grid-template-columns:1fr;padding-top:70px}
+    .hero-copy{padding:2.6rem 1.4rem;justify-self:start}
+    .hero-media{min-height:320px;order:2}
+    .hero-media::after{background:linear-gradient(180deg,var(--plum-deep) 0%,transparent 30%)}
+    .svc-grid,.why-grid,.gal{grid-template-columns:1fr}
+    .gal img{height:230px}
+    .form-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top">Sameera&rsquo;s <span>Salon</span><small>Salon &amp; Academy · Mumbai</small></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#academy">Academy</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+      <a class="nav-cta" href="#book">Book Now</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Dadar East · Mumbai · Since 2010</p>
+    <h1>Look beautiful.<br>Feel <em>confident.</em></h1>
+    <p>Sameera&rsquo;s Salon &amp; Academy is Dadar&rsquo;s trusted destination for hair, skin, makeup and bridal styling — for men &amp; women, under one roof.</p>
+    <div class="badge">★ <b>4.8 rated</b> · 650 Google reviews</div>
+    <div class="hero-btns">
+      <a class="btn btn-wa" href="#book">📅 Book an Appointment</a>
+      <a class="btn btn-ghost" style="color:var(--ivory);border-color:rgba(255,255,255,.45)" href="tel:+917710834029">📞 Call +91 77108 34029</a>
+    </div>
+  </div>
+  <div class="hero-media"><img src="img/hero.jpg" alt="Styled hair at Sameera's Salon & Academy, Mumbai"></div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+    <div><div class="num">650</div><div class="lbl">Customer Reviews</div></div>
+    <div><div class="num">2010</div><div class="lbl">Serving Since</div></div>
+    <div><div class="num">7 Days</div><div class="lbl">Open · 8:30 am – 10 pm</div></div>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">What We Do</p>
+      <h2>Services &amp; <em>Prices</em></h2>
+      <p class="lead">Complete beauty care for men &amp; women — honest prices, skilled hands, and packages that make regular care affordable. Tap <b>Book</b> next to any service to reserve your chair.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <img src="img/styling.jpg" alt="Hair styling and blow dry">
+        <div class="svc-body">
+          <h3>Hair Care</h3>
+          <ul>
+            <li><span class="sname">Women&rsquo;s Haircut</span><span class="price"><small>from</small> ₹400</span><button type="button" class="book-btn" data-service="Women's Haircut">Book</button></li>
+            <li><span class="sname">Hair Spa — Women (per session)</span><span class="price">₹1,200</span><button type="button" class="book-btn" data-service="Hair Spa — Women">Book</button></li>
+            <li><span class="sname">Hair Spa — Men (per session)</span><span class="price">₹800</span><button type="button" class="book-btn" data-service="Hair Spa — Men">Book</button></li>
+            <li><span class="sname">Blow Dry with Wash</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Blow Dry with Wash">Book</button></li>
+            <li><span class="sname">Hair Dressing &amp; Styling</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Hair Dressing &amp; Styling">Book</button></li>
+          </ul>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <img src="img/bridal.jpg" alt="Bridal hairstyling">
+        <div class="svc-body">
+          <h3>Makeup &amp; Bridal</h3>
+          <ul>
+            <li><span class="sname">Bridal Package</span><span class="price">By consult</span><button type="button" class="book-btn" data-service="Bridal Package">Book</button></li>
+            <li><span class="sname">Pre-Wedding Trial Makeup</span><span class="price">By consult</span><button type="button" class="book-btn" data-service="Pre-Wedding Trial Makeup">Book</button></li>
+            <li><span class="sname">Basic Makeup</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Basic Makeup">Book</button></li>
+          </ul>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <img src="img/facial.jpg" alt="Skin care facial treatment">
+        <div class="svc-body">
+          <h3>Skin, Hands &amp; Feet</h3>
+          <ul>
+            <li><span class="sname">Skin Care Treatments</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Skin Care Treatment">Book</button></li>
+            <li><span class="sname">Manicure</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Manicure">Book</button></li>
+            <li><span class="sname">Pedicure</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Pedicure">Book</button></li>
+            <li><span class="sname">Hair Removal · Rica Wax</span><span class="price">In salon</span><button type="button" class="book-btn" data-service="Hair Removal — Rica Wax">Book</button></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <p class="center" style="margin-top:2rem;color:var(--ink-soft)">Prices marked &ldquo;In salon / By consult&rdquo; are confirmed at the salon — book a visit and we&rsquo;ll help you plan it.</p>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section class="section packages" id="packages">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Best Value</p>
+      <h2>Bundle <em>Packages</em></h2>
+      <p class="lead">Pick your favourite services and save — Sameera&rsquo;s popular bundles, loved by regulars across Dadar.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg reveal">
+        <div class="tag">Starter Bundle</div>
+        <div class="amt">₹3,000</div>
+        <p>Any <b>4 services</b> of your choice</p>
+        <button type="button" class="book-btn" data-service="Bundle — Any 4 Services (₹3,000)">Book This Package</button>
+      </div>
+      <div class="pkg reveal">
+        <div class="tag">Most Popular</div>
+        <div class="amt">₹4,000</div>
+        <p>Any <b>6 services</b> of your choice</p>
+        <button type="button" class="book-btn" data-service="Bundle — Any 6 Services (₹4,000)">Book This Package</button>
+      </div>
+      <div class="pkg reveal">
+        <div class="tag">Full Pamper</div>
+        <div class="amt">₹5,000</div>
+        <p>Any <b>8 services</b> of your choice</p>
+        <button type="button" class="book-btn" data-service="Bundle — Any 8 Services (₹5,000)">Book This Package</button>
+      </div>
+      <div class="pkg hot reveal">
+        <div class="tag">Special Offer</div>
+        <div class="amt">₹2,999</div>
+        <p>The <b>Luxury Combo</b> — a complete salon treat</p>
+        <button type="button" class="book-btn" data-service="Luxury Combo (₹2,999)">Book This Package</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal"><img src="img/interior.jpg" alt="Inside Sameera's Salon & Academy"></div>
+    <div class="reveal">
+      <p class="eyebrow">About Us</p>
+      <h2>A Dadar favourite <em>since 2010</em></h2>
+      <p>Located on Madhavdas Pasta Lane in Dadar East, Sameera&rsquo;s Salon &amp; Academy has been looking after Mumbai&rsquo;s hair, skin and makeup needs for over a decade — welcoming both men and women.</p>
+      <p>With a 4.8★ rating from 650 customers and a community of around 17,000 followers on Instagram (@sameerassalon), the salon is known for skilled styling, honest bundle pricing and a warm, personal touch.</p>
+      <ul class="ticks">
+        <li>Salon &amp; training academy under one roof</li>
+        <li>Services for men &amp; women</li>
+        <li>Open every day, 8:30 am – 10:00 pm</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACADEMY ================= -->
+<section class="section academy" id="academy">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Sameera&rsquo;s Academy</p>
+      <h2>Learn beauty, <em>professionally</em></h2>
+      <p>Alongside the salon, Sameera&rsquo;s runs a training academy in Dadar East — where aspiring beauticians and stylists learn the craft inside a working, highly-rated salon.</p>
+      <p>Course batches and details are shared on enquiry — send us an enquiry and we&rsquo;ll tell you what&rsquo;s starting next.</p>
+      <div style="margin-top:1.8rem">
+        <button type="button" class="btn btn-call" data-service="Academy Course Enquiry">🎓 Ask About Courses</button>
+      </div>
+    </div>
+    <div class="reveal"><img src="img/makeup.jpg" alt="Makeup artistry at Sameera's Academy"></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section" id="gallery" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Inside The Salon</p>
+      <h2>Our <em>Gallery</em></h2>
+    </div>
+    <div class="gal reveal">
+      <img src="img/hero.jpg" alt="Glamorous styled hair">
+      <img src="img/styling.jpg" alt="Blow dry styling in progress">
+      <img src="img/bridal.jpg" alt="Bridal hairstyle with flowers">
+      <img src="img/hairspa.jpg" alt="Relaxing hair spa and wash">
+      <img src="img/mens.jpg" alt="Men's grooming and haircut">
+      <img src="img/interior.jpg" alt="Salon interior">
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Why Sameera&rsquo;s</p>
+      <h2>Why customers <em>choose us</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="ico">★</div><h3>4.8★ from 650 reviews</h3><p>One of Dadar&rsquo;s best-rated salons — real customers, real reviews, consistent quality since 2010.</p></div>
+      <div class="why reveal"><div class="ico">✂</div><h3>Everything under one roof</h3><p>Hair, skin, makeup, bridal, hands &amp; feet — plus a training academy, so the team stays sharp on the latest techniques.</p></div>
+      <div class="why reveal"><div class="ico">₹</div><h3>Honest bundle pricing</h3><p>Any 4 services for ₹3,000, any 6 for ₹4,000, any 8 for ₹5,000 — premium care without premium surprises.</p></div>
+      <div class="why reveal"><div class="ico">♡</div><h3>For men &amp; women</h3><p>A welcoming salon for everyone — from haircuts and hair spa to complete bridal packages.</p></div>
+      <div class="why reveal"><div class="ico">◷</div><h3>Open all 7 days</h3><p>8:30 in the morning to 10 at night, every single day — beauty care that fits your schedule.</p></div>
+      <div class="why reveal"><div class="ico">✆</div><h3>Book in one tap</h3><p>No queues, no waiting on hold — pick your service, date and time, and confirm on WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Find us in <em>Dadar East</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <h3>Address</h3>
+        <p>Shop No. 26, Haji Habib Building, Behind Kohinoor Electronics,<br>Near Karishma Restaurant Bar, Madhavdas Pasta Lane,<br>Dadar East, Mumbai – 400014, Maharashtra</p>
+        <div class="btns">
+          <a class="btn btn-wa" href="#book">📅 Book an Appointment</a>
+          <a class="btn btn-ghost" style="color:var(--ivory);border-color:rgba(255,255,255,.45)" href="https://www.google.com/maps/search/?api=1&amp;query=Sameera%27s+Salon+%26+Academy+Dadar+East+Mumbai" target="_blank" rel="noopener">📍 Get Directions</a>
+        </div>
+        <p style="margin-top:1.4rem">Call / WhatsApp: <b style="color:#fff">+91 77108 34029</b> · <b style="color:#fff">+91 86572 46110</b><br>Instagram: <b style="color:#fff">@sameerassalon</b></p>
+      </div>
+      <div class="reveal">
+        <h3>Opening Hours</h3>
+        <ul class="hours">
+          <li><span>Monday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Tuesday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Wednesday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Thursday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Friday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Saturday</span><span>8:30 am – 10:00 pm</span></li>
+          <li><span>Sunday</span><span>8:30 am – 10:00 pm</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="section book-sec" id="book">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Book Now</p>
+      <h2>Book Your <em>Appointment</em></h2>
+      <p class="lead">Fill this quick form — your booking opens in WhatsApp with everything filled in. Just press send, and the salon will confirm your chair.</p>
+    </div>
+    <div class="book-card reveal" id="bookCard">
+      <form id="bookForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="bkName">Your Name *</label>
+            <input type="text" id="bkName" placeholder="e.g. Priya Sharma" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="bkPhone">Phone Number *</label>
+            <input type="tel" id="bkPhone" placeholder="e.g. 98765 43210" autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field full">
+            <label for="bkService">Select Service *</label>
+            <select id="bkService">
+              <option value="">— Choose a service —</option>
+              <optgroup label="Hair Care">
+                <option>Women's Haircut</option>
+                <option>Hair Spa — Women</option>
+                <option>Hair Spa — Men</option>
+                <option>Blow Dry with Wash</option>
+                <option>Hair Dressing &amp; Styling</option>
+              </optgroup>
+              <optgroup label="Makeup &amp; Bridal">
+                <option>Bridal Package</option>
+                <option>Pre-Wedding Trial Makeup</option>
+                <option>Basic Makeup</option>
+              </optgroup>
+              <optgroup label="Skin, Hands &amp; Feet">
+                <option>Skin Care Treatment</option>
+                <option>Manicure</option>
+                <option>Pedicure</option>
+                <option>Hair Removal — Rica Wax</option>
+              </optgroup>
+              <optgroup label="Packages &amp; Bundles">
+                <option>Bundle — Any 4 Services (₹3,000)</option>
+                <option>Bundle — Any 6 Services (₹4,000)</option>
+                <option>Bundle — Any 8 Services (₹5,000)</option>
+                <option>Luxury Combo (₹2,999)</option>
+              </optgroup>
+              <optgroup label="Academy">
+                <option>Academy Course Enquiry</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkDate">Preferred Date *</label>
+            <input type="date" id="bkDate">
+          </div>
+          <div class="field">
+            <label for="bkTime">Preferred Time *</label>
+            <select id="bkTime">
+              <option value="">— Choose a time —</option>
+            </select>
+          </div>
+        </div>
+        <p class="bk-error" id="bkError"></p>
+        <button type="submit" class="btn btn-wa book-submit">💬 Confirm Booking on WhatsApp</button>
+        <p class="bk-note">Open every day, 8:30 am – 10:00 pm · No advance payment needed to book.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fname">Sameera&rsquo;s Salon &amp; Academy</div>
+    <p>Dadar East, Mumbai · Open every day 8:30 am – 10:00 pm · +91 77108 34029</p>
+    <p class="credit">Sample website by Qodra Dev — demo preview</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/917710834029?text=Hi!%20I%27d%20like%20to%20book%20an%20appointment%20at%20Sameera%27s%20Salon%20%26%20Academy." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  var hdr = document.querySelector('header');
+  function onScroll(){ hdr.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll); onScroll();
+  var burger = document.getElementById('burger'), links = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){ links.classList.toggle('open'); });
+  links.addEventListener('click', function(e){ if(e.target.tagName === 'A') links.classList.remove('open'); });
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- Booking form ---------- */
+  var bkService = document.getElementById('bkService'),
+      bkDate = document.getElementById('bkDate'),
+      bkTime = document.getElementById('bkTime'),
+      bkName = document.getElementById('bkName'),
+      bkPhone = document.getElementById('bkPhone'),
+      bkError = document.getElementById('bkError'),
+      bookCard = document.getElementById('bookCard');
+
+  // Date picker: earliest selectable day is today
+  var today = new Date();
+  function isoLocal(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+  bkDate.min = isoLocal(today);
+
+  // Time slots within opening hours: 8:30 am – 10:00 pm (last booking 9:30 pm)
+  (function(){
+    function fmt(mins){
+      var h = Math.floor(mins/60), m = mins%60, ap = h >= 12 ? 'PM' : 'AM', h12 = h%12; if(h12 === 0) h12 = 12;
+      return h12 + ':' + String(m).padStart(2,'0') + ' ' + ap;
+    }
+    for(var t = 8*60+30; t <= 21*60+30; t += 30){
+      var o = document.createElement('option'); o.textContent = fmt(t); bkTime.appendChild(o);
+    }
+  })();
+
+  // Every "Book" button on the page: pre-select its service, then smooth-scroll to the form
+  document.querySelectorAll('[data-service]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wanted = btn.getAttribute('data-service'), found = false;
+      for(var i = 0; i < bkService.options.length; i++){
+        if(bkService.options[i].text === wanted || bkService.options[i].value === wanted){ bkService.selectedIndex = i; found = true; break; }
+      }
+      if(found) bkService.classList.remove('invalid');
+      document.getElementById('book').scrollIntoView({behavior:'smooth'});
+      bookCard.classList.remove('flash'); void bookCard.offsetWidth; bookCard.classList.add('flash');
+      setTimeout(function(){ bkName.focus({preventScroll:true}); }, 650);
+    });
+  });
+
+  // Validate, then open WhatsApp with the prefilled booking message
+  document.getElementById('bookForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var problems = [];
+    function mark(el, bad){ el.classList.toggle('invalid', bad); if(bad) problems.push(el); }
+    var name = bkName.value.trim(),
+        phoneRaw = bkPhone.value.trim(),
+        phoneDigits = phoneRaw.replace(/\D/g,''),
+        service = bkService.value || (bkService.selectedIndex > 0 ? bkService.options[bkService.selectedIndex].text : ''),
+        dateVal = bkDate.value,
+        timeVal = bkTime.value;
+    mark(bkName, name.length < 2);
+    mark(bkPhone, phoneDigits.length < 10);
+    mark(bkService, !service);
+    mark(bkDate, !dateVal);
+    mark(bkTime, !timeVal);
+    if(problems.length){
+      bkError.textContent = 'Please fill all the fields correctly — we need your name, a valid phone number, service, date and time to book your chair.';
+      bkError.classList.add('show');
+      problems[0].focus();
+      return;
+    }
+    bkError.classList.remove('show');
+    var niceDate = new Date(dateVal + 'T00:00:00').toLocaleDateString('en-IN', {weekday:'short', day:'numeric', month:'short', year:'numeric'});
+    var msg = 'New Appointment Request — Sameera\'s Salon & Academy\n' +
+              'Name: ' + name + '\n' +
+              'Phone: ' + phoneRaw + '\n' +
+              'Service: ' + service + '\n' +
+              'Date: ' + niceDate + '\n' +
+              'Time: ' + timeVal + '\n' +
+              'Please confirm my appointment. Thank you!';
+    window.open('https://wa.me/917710834029?text=' + encodeURIComponent(msg), '_blank');
+  });
+</script>
+</body>
+</html>
